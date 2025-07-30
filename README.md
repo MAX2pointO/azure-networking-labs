@@ -30,5 +30,5 @@ Azure virtual networking labs and troubleshooting scenarios for AZ-104 preparati
 
 ---
 
-> 🧑‍💻 Built by Ankit KKumar Giri
+> 🧑‍💻 Built by Ankit Kumar Giri
 
