@@ -18,11 +18,15 @@ Establish a virtual network with two Linux VMs in Azure and test private communi
 4. Ran `ping` to VM2's private IP to verify connectivity.
 
 ## 📸 Screenshots
-- **Azure Portal Overview**  
-  ![VNet Overview](./screenshots/vnet-overview.png)
 
-- **Ping from VM1 to VM2**  
-  ![Ping Result](./screenshots/ping-vm1-vm2.png)
+### Azure Portal Setup
+
+![Azure Portal View](./screenshots/Portal-Overview.png)
+
+### SSH into VM1 and Ping VM2
+
+![Terminal Step 1](./screenshots/Terminal-Overview-1.png)
+![Terminal Step 2](./screenshots/Terminal-Overview-2.png)
 
 ## 📚 What I Learned
 - CIDR/Subnetting basics.
