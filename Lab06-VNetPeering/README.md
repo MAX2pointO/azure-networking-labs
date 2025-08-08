@@ -1,4 +1,4 @@
-# Lab 06: VNet Peering – Azure Networking Labs
+VNet Peering # Lab 06: VNet Peering – Azure Networking Labs
 
 This lab demonstrates how to configure and validate **Virtual Network (VNet) Peering** in Azure. The objective is to enable communication between two VMs located in separate virtual networks using private IP addresses through peering.
 
@@ -70,7 +70,7 @@ az network vnet peering create \
 
 # View peering status
 az network vnet peering list --resource-group rg-vnet-peering --vnet-name vnet-east --output table
-
+```
 ---
 
 ##🧾 Outcome
