@@ -71,7 +71,9 @@ az network vnet peering create \
 # View peering status
 az network vnet peering list --resource-group rg-vnet-peering --vnet-name vnet-east --output table
 
-🧾 Outcome
+---
+
+##🧾 Outcome
 
 VMs in different VNets could not communicate before peering.
 
@@ -81,7 +83,7 @@ Public IPs were used only for SSH access.
 
 Peering status was shown as Connected in both directions.
 
-📂 GitHub Uploads
+##📂 GitHub Uploads
 
 README.md
 
@@ -89,7 +91,7 @@ troubleshooting.md
 
 Screenshots (named clearly, e.g. peering-config-east.png, ping-success.png, etc.)
 
-🧠 Key Learnings
+##🧠 Key Learnings
 
 VNet peering enables secure communication across regions
 
