@@ -2,8 +2,6 @@
 
 This file documents the challenges encountered during the lab and the solutions applied to resolve them.
 
----
-
 ## 🚫 Issue 1: Unable to ping private IP before peering
 
 - **Symptom**: Ping to the private IP of the other VM failed (`Destination host unreachable`)
@@ -30,6 +28,7 @@ az network nsg rule create \
   --destination-address-prefixes '*' \
   --access Allow \
   --description "Allow ICMP traffic"
+```
 
 🔑 Issue 3: SSH access failed intermittently
 
@@ -39,28 +38,28 @@ az network nsg rule create \
 
 ❓ Issue 4: No public IP shown for VM
 
--Symptom: az vm list-ip-addresses returned empty publicIpAddresses[]
--Root Cause: Public IP not assigned during VM creation
--Fix: Added public IP through Portal or recreated VM with public IP config
+- **Symptom**: az vm list-ip-addresses returned empty publicIpAddresses[]
+- **Root Cause**: Public IP not assigned during VM creation
+- **Fix**: Added public IP through Portal or recreated VM with public IP config
 
 🧾 Issue 5: VNet Peering shows "Initiated" instead of "Connected"
 
--Symptom: Peering from one side showed "Initiated"
--Root Cause: Peering was only configured from one VNet
--Fix: Added reverse peering from the other VNet to complete connection
+- **Symptom**: Peering from one side showed "Initiated"
+- **Root Cause**: Peering was only configured from one VNet
+- **Fix**: Added reverse peering from the other VNet to complete connection
 
 🔁 Validation Summary
 
--Used az vm list-ip-addresses, az network vnet peering list and ping to validate setup
--Confirmed peering is bidirectional and NSGs are correctly configured
--Captured screenshots at each verification step
+- **Used az vm list-ip-addresses, az network vnet peering list and ping to validate setup
+- **Confirmed peering is bidirectional and NSGs are correctly configured
+- **Captured screenshots at each verification step
 
 ✅ Recommendations
 
--Always verify NSG rules when testing connectivity
--Ensure both directions of peering are created
--Use --output table to clearly see peering and IP information
--Use tags to group related resources for cleanup
+- **Always verify NSG rules when testing connectivity
+- **Ensure both directions of peering are created
+- **Use --output table to clearly see peering and IP information
+- **Use tags to group related resources for cleanup
 
 
 ---

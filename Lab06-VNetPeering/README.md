@@ -2,7 +2,6 @@ VNet Peering # Lab 06: VNet Peering – Azure Networking Labs
 
 This lab demonstrates how to configure and validate **Virtual Network (VNet) Peering** in Azure. The objective is to enable communication between two VMs located in separate virtual networks using private IP addresses through peering.
 
----
 
 ## 🧪 Lab Goals
 
@@ -73,30 +72,26 @@ az network vnet peering list --resource-group rg-vnet-peering --vnet-name vnet-e
 ```
 ---
 
-##🧾 Outcome
+🧾 Outcome
 
-VMs in different VNets could not communicate before peering.
+- **VMs in different VNets could not communicate before peering.
+- **After peering and NSG configuration, VMs successfully pinged each other using private IPs.
+- **Public IPs were used only for SSH access.
+- **Peering status was shown as Connected in both directions.
 
-After peering and NSG configuration, VMs successfully pinged each other using private IPs.
+---
 
-Public IPs were used only for SSH access.
+📂 GitHub Uploads
 
-Peering status was shown as Connected in both directions.
+- **README.md
+- **troubleshooting.md
+- **Screenshots (named clearly, e.g. peering-config-east.png, ping-success.png, etc.)
 
-##📂 GitHub Uploads
+---
 
-README.md
+🧠 Key Learnings
 
-troubleshooting.md
-
-Screenshots (named clearly, e.g. peering-config-east.png, ping-success.png, etc.)
-
-##🧠 Key Learnings
-
-VNet peering enables secure communication across regions
-
-NSG must allow ICMP/SSH for testing
-
-DNS resolution and routing still depend on explicit settings (if needed)
-
-Peering is non-transitive, and must be explicitly configured in both directions
+- **VNet peering enables secure communication across regions
+- **NSG must allow ICMP/SSH for testing
+- **DNS resolution and routing still depend on explicit settings (if needed)
+- **Peering is non-transitive, and must be explicitly configured in both directions
